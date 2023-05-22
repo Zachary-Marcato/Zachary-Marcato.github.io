@@ -4,11 +4,17 @@
 <button onclick="getSpeed()">Get speed</button>
 <p>Current download speed is <a id="speed"> ?? </a></p>
 <br>
-<a id="something"></a>
+<button onclick="changes()" id="button button">C'mon do something</button>
+
 
 <script type = "text/javascript">
+    window.addEventListener("offline", (event) => {
+        alert("You have exited Wi-Fi range! Please re-enter Wi-Fi range before doing any changes!")
+        document.getElementById("button button").disabled = true
+    })
     window.addEventListener("online", (event) => {
-        document.getElementById("something").textContent = "You are online"
+        alert("Wi-Fi connection restored")
+        document.getElementById("button button").disabled = false
     })
     document.getElementById("speed").textContent = `asdfadfs`
 </script>
