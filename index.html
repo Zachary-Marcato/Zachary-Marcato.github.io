@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
+<button onclick="getspeed">Get speed</button>
 <p>Current download speed is <a id="speed"> ?? </a></p>
 
 <script type = "text/javascript">
-    document.getElementById("speed").textContent = `${NetworkInformation.downlink} Mbps`
+    function getSpeed() {
+        document.getElementById("speed").textContent = `${NetworkInformation.downlink} Mbps`
+    }
 </script>
 </body>
 </html>
