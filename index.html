@@ -7,10 +7,10 @@
 <a id="something"></a>
 
 <script type = "text/javascript">
-    document.getElementById("something").textContent = `sassadfasdf`
-    function getSpeed() {
-        document.getElementById("speed").textContent = `asdfadfs`
-    }
+    window.addEventListener("online", (event) => {
+        document.getElementById("something").textContent = "You are online"
+    })
+    document.getElementById("speed").textContent = `asdfadfs`
 </script>
 </body>
 </html>
