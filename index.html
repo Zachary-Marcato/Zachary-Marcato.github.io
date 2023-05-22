@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<p>Current download speed is <a id="speed"> ?? </a></p>
+
+<script type = "text/javascript">
+    document.getElementById("speed").textContent = `${NetworkInformation.downlink} Mbps`
+</script>
 </body>
 </html>
