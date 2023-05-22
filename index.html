@@ -2,7 +2,7 @@
 <html>
 <body>
 <button onclick="getSpeed()">Get speed</button>
-<p>Current download speed is <a id="speed"> ?? </a></p>
+<p id="speed"></p>
 <br>
 <button onclick="changes()" id="button button">C'mon do something</button>
 
@@ -16,7 +16,17 @@
         alert("Wi-Fi connection restored")
         document.getElementById("button button").disabled = false
     })
-    document.getElementById("speed").textContent = `asdfadfs`
+    function getSpeed() {
+        try {
+            document.getElementById("speed").textContent = `Your speed is ${navigator.connection.downlink} Mbps`
+        } catch (e)
+        {
+            document.getElementById("speed").textContent = "Oops something went wrong"
+        }
+    }
+    function changes() {
+        alert("I did something woo hoo")
+    }
 </script>
 </body>
 </html>
