@@ -3,10 +3,13 @@
 <body>
 <button onclick="getSpeed()">Get speed</button>
 <p>Current download speed is <a id="speed"> ?? </a></p>
+<br>
+<a id="something"></a>
 
 <script type = "text/javascript">
+    document.getElementById("something").textContent = `sassadfasdf`
     function getSpeed() {
-        document.getElementById("speed").textContent = `${NetworkInformation.downlink} Mbps`
+        document.getElementById("speed").textContent = `asdfadfs`
     }
 </script>
 </body>
